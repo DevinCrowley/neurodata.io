@@ -1,6 +1,9 @@
 $title: Zebromes
 $order: 5
 
+featured: True
+$slug: Zebromes
+
 heading: Zebromes
 description:
 long_description:

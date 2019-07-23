@@ -1,6 +1,9 @@
-$title: OCP
+$title: Open Connectome Project
 $path: /{base}/
 $order: 1
+$slug: OCP
+
+featured: True
 
 heading: Open Connectome Project
 

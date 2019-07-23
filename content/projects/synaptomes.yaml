@@ -1,6 +1,9 @@
 $title: Synaptomes
 $order: 4
 
+featured: True
+$slug: Synaptomes
+
 heading: Synaptomes
 description:
 long_description:

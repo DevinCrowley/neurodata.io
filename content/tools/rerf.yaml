@@ -1,6 +1,7 @@
 $title: Randomer Forest
 $order: 1
 name: RerF
+$slug: RerF
 
 github: "neurodata/RerF"
 docs: "https://rerf.neurodata.io"

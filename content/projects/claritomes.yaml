@@ -1,6 +1,9 @@
 $title: Claritomes
 $order: 5
 
+featured: True
+$slug: Claritomes
+
 heading: Claritomes
 description:
 long_description:

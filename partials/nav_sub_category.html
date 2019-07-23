@@ -1,16 +1,21 @@
 {% if not mobile_nav %}
     <li>
+        {% if item.has_page %}
+        <a href="{{item.url.path}}"><h5>{{item.base}}</h5></a>
+        {% else %}
         <h5>{{item.base}}</h5>
+        {% endif %}
             <ul>
-            {% for proj in g.docs(item.base) %}
+            {% for subitem in g.docs(item.base) if subitem.featured %}
                 <li>
-                    <a href="{{proj.url.path}}"><h6>{{proj.title}}</h6></a>
+                    <a href="{{subitem.url.path}}"><h6>{{subitem.slug}}</h6></a>
                 </li>
             {% endfor %}
             </ul>
     </li>
 {% else %}
     <li>
+        {% if not item.has_page %}
         <a href="#" class="expand_projects" data="mobile_nav_{{item.base}}"><h5>{{ item.base }}</h5></a>
 
         <div id="mobile_nav_{{item.base}}" style="display:none">
@@ -18,5 +23,10 @@
                 <a href="{{proj.url.path}}"><h6>{{proj.title}}</h6></a>
             {% endfor %}
         </div>
+        {% else %}
+            <li>
+                <a href="{{item.url.path}}"><h5>{{item.base}}</h5></a>
+            </li>
+        {% endif %}
     </li>
 {% endif %}
